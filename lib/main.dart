@@ -32,17 +32,17 @@ class _HomeState extends State<Home> {
       double imc = pesoFinal / (alturaFinal * alturaFinal);
 
       if (imc < 18.6) {
-        info = "Abaixo do peso. imc: ${imc.toStringAsPrecision(3)}";
+        info = "Abaixo do peso. IMC: ${imc.toStringAsPrecision(3)}";
       } else if (imc >= 18.6 && imc < 24.9) {
-        info = "Peso ideal. imc: ${imc.toStringAsPrecision(3)}";
+        info = "Peso ideal. IMC: ${imc.toStringAsPrecision(3)}";
       } else if (imc >= 24.9 && imc < 29.9) {
-        info = "Levemente acima do peso. imc: ${imc.toStringAsPrecision(3)}";
+        info = "Levemente acima do peso. IMC: ${imc.toStringAsPrecision(3)}";
       } else if (imc >= 29.9 && imc < 34.9) {
-        info = "Obesidade grau 1. imc: ${imc.toStringAsPrecision(3)}";
+        info = "Obesidade grau 1. IMC: ${imc.toStringAsPrecision(3)}";
       } else if (imc >= 34.9 && imc < 39.9) {
-        info = "Obesidade grau 2. imc: ${imc.toStringAsPrecision(3)}";
+        info = "Obesidade grau 2. IMC: ${imc.toStringAsPrecision(3)}";
       } else if (imc >= 40.0) {
-        info = "Obesidade grau 3. imc: ${imc.toStringAsPrecision(3)}";
+        info = "Obesidade grau 3. IMC: ${imc.toStringAsPrecision(3)}";
       }
     });
   }
@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Calculadora de imc"),
+          title: Text("Calculadora de IMC"),
           centerTitle: true,
           backgroundColor: Colors.green,
           actions: [IconButton(icon: Icon(Icons.refresh), onPressed: reset)],
@@ -102,7 +102,7 @@ class _HomeState extends State<Home> {
                           color: Colors.green,
                           onPressed: () {
                             if (formKey.currentState.validate()) {
-                              resultado;
+                              resultado();
                             }
                           },
                           child: Text("Calcular",
